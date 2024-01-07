@@ -1,0 +1,194 @@
+[
+  [
+    "name" : "Email",
+    "parameters" : [
+      "From" : new StringDataType(),
+      "To" : new StringDataType(),
+      "Subject" : new StringDataType(),
+      "Body" : new StringDataType()
+    ],
+    "displayName" : "Email",
+    "icon" : "defaultemailicon.gif"
+  ],
+
+  [
+    "name" : "Log",
+    "parameters" : [
+      "Message" : new StringDataType()
+    ],
+    "displayName" : "Log",
+    "icon" : "defaultlogicon.gif"
+  ],
+
+  [
+    "name" : "WebService",
+    "parameters" : [
+        "Url" : new StringDataType(),
+         "Namespace" : new StringDataType(),
+         "Interface" : new StringDataType(),
+         "Operation" : new StringDataType(),
+         "Parameter" : new StringDataType(),
+         "Endpoint" : new StringDataType(),
+         "Mode" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "WS",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "Rest",
+    "parameters" : [
+        "ContentData" : new StringDataType(),
+        "Url" : new StringDataType(),
+        "Method" : new StringDataType(),
+        "ConnectTimeout" : new StringDataType(),
+        "ReadTimeout" : new StringDataType(),
+        "Username" : new StringDataType(),
+        "Password" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "REST",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "RestRetry",
+    "parameters" : [
+        "ContentData" : new StringDataType(),
+        "Url" : new StringDataType(),
+        "Method" : new StringDataType(),
+        "ConnectTimeout" : new StringDataType(),
+        "ReadTimeout" : new StringDataType(),
+        "Username" : new StringDataType(),
+        "Password" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "RestRetry",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+     "name" : "BusinessRuleTask",
+     "parameters" : [
+       "Language" : new StringDataType(),
+       "KieSessionName" : new StringDataType(),
+       "KieSessionType" : new StringDataType()
+     ],
+     "displayName" : "Business Rule Task",
+     "icon" : "defaultbusinessrulesicon.png",
+     "category" : "Decision tasks"
+   ],
+
+   [
+     "name" : "DecisionTask",
+     "parameters" : [
+       "Language" : new StringDataType(),
+       "Namespace" : new StringDataType(),
+       "Model" : new StringDataType(),
+       "Decision" : new StringDataType()
+     ],
+     "displayName" : "Decision Task",
+     "icon" : "defaultdecisionicon.png",
+     "category" : "Decision tasks"
+   ],
+
+   [
+    "name" : "Milestone",
+    "parameters" : [
+        "Condition" : new StringDataType()
+    ],
+    "displayName" : "Milestone",
+    "icon" : "defaultmilestoneicon.png",
+    "category" : "Milestone"
+    ],
+     [
+        "name" : "ClientRequestHandler",
+		 "parameters" : [ 
+            "imei" : new IntegerDataType(),
+			"msisdn" : new IntegerDataType(),
+			"imsi" : new IntegerDataType(),
+			"iccid" : new IntegerDataType()
+         ], 
+        "defaultHandler" : "mvel: new tr.com.metamorfoz.ClientRequestHandler()",
+        "category" : "Metamorfoz",
+        "displayName" : "ClientRequestHandler", 
+        "icon" : "defaultwebserviceicon.png" 
+   ],
+    [
+        "name" : "DeviceInfoHandler", 
+        "parameters" : [ 
+            "host" : new StringDataType(),
+            "imei" : new IntegerDataType()
+                ], 
+        "results" : [ 
+            "deviceInfo" : new ObjectDataType("tr.com.metamorfoz.DeviceInfo")
+        ], 
+        "defaultHandler" : "mvel: new tr.com.metamorfoz.DeviceInfoHandler()",
+        "displayName" : "DeviceInfo",
+        "category" : "Metamorfoz",
+        "icon" : "defaultwebserviceicon.png" 
+   ],
+   [
+        "name" : "DmcSettingHandler", 
+        "results" : [ 
+           "dmcSettingList" :  new ObjectDataType()
+        ], 
+        "defaultHandler" : "mvel: new tr.com.metamorfoz.DmcSettingHandler()",
+        "category" : "Metamorfoz",
+        "displayName" : "DmcSetting", 
+        "icon" : "defaultwebserviceicon.png" 
+   ],
+   [
+        "name" : "DecisionNotifierHandler", 
+        "defaultHandler" : "mvel: new tr.com.metamorfoz.DecisionNotifierHandler()",
+        "category" : "Metamorfoz",
+        "displayName" : "DecisionNotifier", 
+        "icon" : "defaultwebserviceicon.png" 
+   ]
+   ,
+   [
+            "name" : "Rest",
+            "displayName" : "Rest",
+            "category" : "jbpm-workitems-rest",
+            "description" : "",
+            "defaultHandler" : "mvel: new org.jbpm.process.workitem.rest.RESTWorkItemHandler()",
+            "documentation" : "jbpm-workitems-rest/index.html",
+
+            "parameters" : [
+                                "ConnectTimeout" : new StringDataType()
+                ,"ResultClass" : new StringDataType()
+                ,"ContentType" : new StringDataType()
+                ,"AcceptCharset" : new StringDataType()
+                ,"Headers" : new StringDataType()
+                ,"AuthUrl" : new StringDataType()
+                ,"Method" : new StringDataType()
+                ,"ReadTimeout" : new StringDataType()
+                ,"Url" : new StringDataType()
+                ,"ContentTypeCharset" : new StringDataType()
+                ,"HandleResponseErrors" : new StringDataType()
+                ,"ContentData" : new StringDataType()
+                ,"Username" : new StringDataType()
+                ,"Content" : new StringDataType()
+                ,"AcceptHeader" : new StringDataType()
+                ,"AuthType" : new StringDataType()
+                ,"Password" : new StringDataType()
+
+            ],
+            "results" : [
+                                "Result" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "org.jbpm:jbpm-workitems-rest:7.46.0.Final"
+
+            ],
+            "icon" : "Rest.png"
+
+        ]
+]
