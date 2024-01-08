@@ -30,12 +30,6 @@
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler(classLoader,"DmcSettingSelector.error-handling", "RETRY")</identifier>
-            <parameters/>
-            <name>RestRetry</name>
-        </work-item-handler>
-        <work-item-handler>
-            <resolver>mvel</resolver>
             <identifier>new tr.com.metamorfoz.ClientRequestHandler()</identifier>
             <parameters/>
             <name>ClientRequestHandler</name>
@@ -47,7 +41,38 @@
             <name>DeviceInfoHandler</name>
         </work-item-handler>
     </work-item-handlers>
-    <environment-entries/>
+    <environment-entries>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>3L</identifier>
+            <parameters/>
+            <name>dmcSettingTriggerInterval_min</name>
+        </environment-entry>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>"http://localhost:8081"</identifier>
+            <parameters/>
+            <name>device_info_host</name>
+        </environment-entry>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>"http://localhost:8081"</identifier>
+            <parameters/>
+            <name>decision_notifier_host</name>
+        </environment-entry>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>"https://dummyjson.com/products/1"</identifier>
+            <parameters/>
+            <name>client_service_host</name>
+        </environment-entry>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>"http://localhost:8081"</identifier>
+            <parameters/>
+            <name>dmc_setting_host</name>
+        </environment-entry>
+    </environment-entries>
     <configurations/>
     <required-roles/>
     <remoteable-classes/>

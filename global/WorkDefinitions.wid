@@ -123,9 +123,12 @@
     [
         "name" : "DeviceInfoHandler", 
         "parameters" : [ 
-            "host" : new StringDataType(),
-            "imei" : new IntegerDataType()
-                ], 
+           "host" : new StringDataType(),
+           "socket_timeout" : new IntegerDataType(),
+           "connect_timeout" : new IntegerDataType(),
+           "connection_request_timeout" : new IntegerDataType(),
+           "imei" : new IntegerDataType()
+        ], 
         "results" : [ 
             "deviceInfo" : new ObjectDataType("tr.com.metamorfoz.DeviceInfo")
         ], 
@@ -135,7 +138,13 @@
         "icon" : "defaultwebserviceicon.png" 
    ],
    [
-        "name" : "DmcSettingHandler", 
+        "name" : "DmcSettingHandler",
+        "parameters" : [ 
+           "host" : new StringDataType(),
+           "socket_timeout" : new IntegerDataType(),
+           "connect_timeout" : new IntegerDataType(),
+           "connection_request_timeout" : new IntegerDataType()
+        ],  
         "results" : [ 
            "dmcSettingList" :  new ObjectDataType()
         ], 
@@ -145,50 +154,19 @@
         "icon" : "defaultwebserviceicon.png" 
    ],
    [
-        "name" : "DecisionNotifierHandler", 
+        "name" : "DecisionNotifierHandler",
+        "parameters" : [ 
+           "host" : new StringDataType(),
+           "socket_timeout" : new IntegerDataType(),
+           "connect_timeout" : new IntegerDataType(),
+           "connection_request_timeout" : new IntegerDataType()
+        ],  
+        "results" : [ 
+           "result" :  new StringDataType()
+        ], 
         "defaultHandler" : "mvel: new tr.com.metamorfoz.DecisionNotifierHandler()",
         "category" : "Metamorfoz",
         "displayName" : "DecisionNotifier", 
         "icon" : "defaultwebserviceicon.png" 
    ]
-   ,
-   [
-            "name" : "Rest",
-            "displayName" : "Rest",
-            "category" : "jbpm-workitems-rest",
-            "description" : "",
-            "defaultHandler" : "mvel: new org.jbpm.process.workitem.rest.RESTWorkItemHandler()",
-            "documentation" : "jbpm-workitems-rest/index.html",
-
-            "parameters" : [
-                                "ConnectTimeout" : new StringDataType()
-                ,"ResultClass" : new StringDataType()
-                ,"ContentType" : new StringDataType()
-                ,"AcceptCharset" : new StringDataType()
-                ,"Headers" : new StringDataType()
-                ,"AuthUrl" : new StringDataType()
-                ,"Method" : new StringDataType()
-                ,"ReadTimeout" : new StringDataType()
-                ,"Url" : new StringDataType()
-                ,"ContentTypeCharset" : new StringDataType()
-                ,"HandleResponseErrors" : new StringDataType()
-                ,"ContentData" : new StringDataType()
-                ,"Username" : new StringDataType()
-                ,"Content" : new StringDataType()
-                ,"AcceptHeader" : new StringDataType()
-                ,"AuthType" : new StringDataType()
-                ,"Password" : new StringDataType()
-
-            ],
-            "results" : [
-                                "Result" : new StringDataType()
-
-            ],
-            "mavenDependencies" : [
-                                 "org.jbpm:jbpm-workitems-rest:7.46.0.Final"
-
-            ],
-            "icon" : "Rest.png"
-
-        ]
 ]

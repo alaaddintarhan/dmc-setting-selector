@@ -1,0 +1,6 @@
+java.time.Instant now =  java.time.Instant.now();
+
+kcontext.getKnowledgeRuntime().setGlobal("g_dmcSettingList",dmcSettingList);
+kcontext.getKnowledgeRuntime().setGlobal("g_dmcSettingTriggerTime",now);
+
+//System.out.println("\n.....>'dmcSettingList' is saved as  global parameter. Size :"+dmcSettingList.size()+" , time : "+now);
