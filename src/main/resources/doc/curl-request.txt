@@ -1,0 +1,12 @@
+
+curl --location '#{url}/processes/instances/signal/select' \
+--header 'accept: application/json' \
+--header 'content-type: application/json' \
+--header 'Authorization: Basic a3Jpc3Y6a3Jpc3Y=' \
+--header 'Cookie: api-cookie=a6f9cc849863e44c1972a8d8590c0544|a1def8d0c43a98111606ef1807bc83cc' \
+--data '{
+    "imei":15,
+    "msisdn":123,
+    "iccid":4567,
+    "imsi":1
+}'

@@ -40,3 +40,8 @@ Installation DmcSettingSelector
     - dmcSettingTriggerInterval_min=3L
  Note: hosts are depends on you , define as a string  using   quotation mark " 
 
+5- Deploy button on the top-right.
+
+6- Go to >> Deploy > Execution Servers and  find your deployment unit. 
+    - copy #{url} from status box.  as like http://localhost:8080/kie-server/services/rest/server/containers/dcm-setting-selector_1.0.0-SNAPSHOT
+    - create  signal request  : using #{url} and  [curl-request](src/main/resources/doc/curl-request.txt)
