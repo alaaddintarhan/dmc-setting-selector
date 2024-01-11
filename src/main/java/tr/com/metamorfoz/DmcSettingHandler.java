@@ -50,8 +50,8 @@ public class DmcSettingHandler
 					.addHeader(org.apache.http.HttpHeaders.ACCEPT,
 							"application/json")
 					.addHeader(org.apache.http.HttpHeaders.CONTENT_TYPE,
-							"application/json").addParameter("pUser", "admin")
-					.addParameter("pPwd", "admin");
+							"application/json").addParameter("pUser", "jbpm")
+					.addParameter("pPwd", "ş&klg86h4f5s2(o");
 
 			java.net.URI requestUri = builder.getUri();
 			org.apache.http.HttpHost httpHost = new org.apache.http.HttpHost(
