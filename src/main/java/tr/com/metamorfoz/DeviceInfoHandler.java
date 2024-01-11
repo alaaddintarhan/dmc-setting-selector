@@ -23,7 +23,7 @@ public class DeviceInfoHandler
 
 		java.util.Map<String, Object> output = new java.util.HashMap<String, Object>();
 
-		Integer imei = Integer.valueOf((String) workItem.getParameter("imei"));
+		String imei = (String) workItem.getParameter("imei");
 		String host = getVal(workItem, "host");
 		String uri = String.format("%s%s", host, SERVICE_URI);
 
@@ -52,9 +52,9 @@ public class DeviceInfoHandler
 					.addHeader(org.apache.http.HttpHeaders.ACCEPT,
 							"application/json")
 					.addHeader(org.apache.http.HttpHeaders.CONTENT_TYPE,
-							"application/json").addParameter("pUser", "admin")
-					.addParameter("pPwd", "admin")
-					.addParameter("pImei", imei.toString());
+							"application/json").addParameter("pUser", "jbpm")
+					.addParameter("pPwd", "ş&klg86h4f5s2(o")
+					.addParameter("pImei", imei);
 
 			java.net.URI requestUri = builder.getUri();
 			org.apache.http.HttpHost httpHost = new org.apache.http.HttpHost(

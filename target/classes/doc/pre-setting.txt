@@ -1,0 +1,8 @@
+org.kie.api.runtime.Environment env = kcontext.getKnowledgeRuntime().getEnvironment();
+System.out.println("\n\n\n.....> env : "+env+"\n\n\n");
+
+kcontext.setVariable("dmc_setting_host",env.get("dmc_setting_host"));
+kcontext.setVariable("device_info_host",env.get("device_info_host"));
+kcontext.setVariable("decision_notifier_host",env.get("decision_notifier_host"));
+kcontext.setVariable("client_service_host",env.get("client_service_host"));
+//kcontext.setVariable("dmcSettingTriggerInterval_min",env.get("dmcSettingTriggerInterval_min"));

@@ -9,51 +9,51 @@ public class ClientRequest implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
 
 	@org.kie.api.definition.type.Label("msisdn")
-	private java.lang.Integer msisdn;
+	private java.lang.String msisdn;
 	@org.kie.api.definition.type.Label("imsi")
-	private java.lang.Integer imsi;
+	private java.lang.String imsi;
 	@org.kie.api.definition.type.Label("imei")
-	private java.lang.Integer imei;
+	private java.lang.String imei;
 	@org.kie.api.definition.type.Label("iccid")
-	private java.lang.Integer iccid;
+	private java.lang.String iccid;
 
 	public ClientRequest() {
 	}
 
-	public java.lang.Integer getMsisdn() {
+	public java.lang.String getMsisdn() {
 		return this.msisdn;
 	}
 
-	public void setMsisdn(java.lang.Integer msisdn) {
+	public void setMsisdn(java.lang.String msisdn) {
 		this.msisdn = msisdn;
 	}
 
-	public java.lang.Integer getImsi() {
+	public java.lang.String getImsi() {
 		return this.imsi;
 	}
 
-	public void setImsi(java.lang.Integer imsi) {
+	public void setImsi(java.lang.String imsi) {
 		this.imsi = imsi;
 	}
 
-	public java.lang.Integer getImei() {
+	public java.lang.String getImei() {
 		return this.imei;
 	}
 
-	public void setImei(java.lang.Integer imei) {
+	public void setImei(java.lang.String imei) {
 		this.imei = imei;
 	}
 
-	public java.lang.Integer getIccid() {
+	public java.lang.String getIccid() {
 		return this.iccid;
 	}
 
-	public void setIccid(java.lang.Integer iccid) {
+	public void setIccid(java.lang.String iccid) {
 		this.iccid = iccid;
 	}
 
-	public ClientRequest(java.lang.Integer msisdn, java.lang.Integer imsi,
-			java.lang.Integer imei, java.lang.Integer iccid) {
+	public ClientRequest(java.lang.String msisdn, java.lang.String imsi,
+			java.lang.String imei, java.lang.String iccid) {
 		this.msisdn = msisdn;
 		this.imsi = imsi;
 		this.imei = imei;
